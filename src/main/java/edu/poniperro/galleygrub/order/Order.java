@@ -44,7 +44,7 @@ public class Order implements Comanda {
     public void display() {
         String output = "\n\t --- ORDER ---  \n";
         for (Item item : items) {
-            output += "\t" + item.name() + "..." + item.price() + "\n";
+            output += "\t" + item.name() + "...." + item.price() + "$\n";
         }
         System.out.println(output);
     }
