@@ -8,7 +8,7 @@ public interface Ticket {
     void setChain(Extra extra);
     Extra getChain();
     Double total();
-    void sumExtraCharge();
+    void sumExtrasCharge();
     void print();
 
 }
