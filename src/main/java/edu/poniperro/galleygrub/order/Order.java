@@ -33,7 +33,7 @@ public class Order implements Comanda {
 
     @Override
     public Double getTotal() {
-        return null;
+        return total;
     }
 
     @Override
