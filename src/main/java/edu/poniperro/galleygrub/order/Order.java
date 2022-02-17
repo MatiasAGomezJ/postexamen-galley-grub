@@ -42,7 +42,7 @@ public class Order implements Comanda {
 
     @Override
     public void display() {
-        String output = "";
+        String output = "\n\t --- ORDER ---  \n";
         for (Item item : items) {
             output += "\t" + item.name() + "..." + item.price() + "\n";
         }

@@ -73,15 +73,15 @@ public class App
         System.out.print("\n\t --- GALLEY GRUB ---  \n");
 
         Product patty = new Item("Krabby Patty", 1.25);
-//        display(patty);
+        display(patty);
         Product bits = new Item("Coral Bits", 1.00);
-//        display(bits);
+        display(bits);
         Product rings = new Item("Kelp Rings", 1.50);
-//        display(rings);
+        display(rings);
         Product loaf = new Item("Golden Loaf", 2.00);
-//        display(loaf);
+        display(loaf);
         Product soda = new Item("Seafoam Soda", 1.00);
-//        display(soda);
+        display(soda);
 
         /**
          * Bubble Bass llega al restaurante
@@ -220,7 +220,7 @@ public class App
 //        receiptExtra.print();
     }
 
-//    public static void display(Product item) {
-//        System.out.print("\t" + item.toString() + "\n");
-//    }
+    public static void display(Product item) {
+        System.out.print("\t" + item.toString() + "\n");
+    }
 }
