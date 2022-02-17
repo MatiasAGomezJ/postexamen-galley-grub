@@ -1,4 +1,4 @@
-package edu.poniperro.galleygrub.extras;
+package edu.poniperro.galleygrub.items;
 
 import java.util.HashMap;
 import java.util.Map;

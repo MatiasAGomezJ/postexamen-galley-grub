@@ -5,12 +5,11 @@ package edu.poniperro.galleygrub;
 //import edu.poniperro.galleygrub.extras.Regular;
 //import edu.poniperro.galleygrub.extras.SauceExtra;
 //import edu.poniperro.galleygrub.extras.SizeLargeExtra;
-import edu.poniperro.galleygrub.extras.Prices;
-//import edu.poniperro.galleygrub.items.Item;
-//import edu.poniperro.galleygrub.items.Prices;
-//import edu.poniperro.galleygrub.items.Product;
-//import edu.poniperro.galleygrub.order.Comanda;
-//import edu.poniperro.galleygrub.order.Order;
+import edu.poniperro.galleygrub.items.Item;
+import edu.poniperro.galleygrub.items.Prices;
+import edu.poniperro.galleygrub.items.Product;
+import edu.poniperro.galleygrub.order.Comanda;
+import edu.poniperro.galleygrub.order.Order;
 //import edu.poniperro.galleygrub.receipt.Receipt;
 //import edu.poniperro.galleygrub.receipt.Ticket;
 
@@ -56,70 +55,70 @@ public class App
         System.out.print("\n\t --- PRICES ---  \n");
         Prices.display();
 
-//        /**
-//         * Crea los items del menu
-//         * y printa sus datos.
-//         *
-//         * Krabby Patty
-//         * Coral Bits
-//         * Kelp Rings
-//         * Golden Loaf
-//         * Seafoam Soda
-//         *
-//         * Incluye los metodos sobrescritos
-//         * equals y hascode para comparar objetos
-//         * de tipo Item.
-//         */
-//
-//        System.out.print("\n\t --- GALLEY GRUB ---  \n");
-//
-//        Product patty = new Item("Krabby Patty", 1.25);
+        /**
+         * Crea los items del menu
+         * y printa sus datos.
+         *
+         * Krabby Patty
+         * Coral Bits
+         * Kelp Rings
+         * Golden Loaf
+         * Seafoam Soda
+         *
+         * Incluye los metodos sobrescritos
+         * equals y hascode para comparar objetos
+         * de tipo Item.
+         */
+
+        System.out.print("\n\t --- GALLEY GRUB ---  \n");
+
+        Product patty = new Item("Krabby Patty", 1.25);
 //        display(patty);
-//        Product bits = new Item("Coral Bits", 1.00);
+        Product bits = new Item("Coral Bits", 1.00);
 //        display(bits);
-//        Product rings = new Item("Kelp Rings", 1.50);
+        Product rings = new Item("Kelp Rings", 1.50);
 //        display(rings);
-//        Product loaf = new Item("Golden Loaf", 2.00);
+        Product loaf = new Item("Golden Loaf", 2.00);
 //        display(loaf);
-//        Product soda = new Item("Seafoam Soda", 1.00);
+        Product soda = new Item("Seafoam Soda", 1.00);
 //        display(soda);
 
-//        /**
-//         * Bubble Bass llega al restaurante
-//         * y hace una comanda muy simple.
-//         * Quiere todo lo que hay en el menu
-//         * en su tamaño estandar y sin
-//         * condimentos extras.
-//         *
-//         * Squidward Tentacles crea la comanda
-//         * y la muestra en la pantalla para que
-//         * el cliente le de el visto bueno
-//         * antes de generar el recibo con la factura.
-//         *
-//         *
-//         * OPCIONAL:
-//         * Puesto que a lo largo del dia van a generarse muchos objetos
-//         * siempre del mismo tipo, vamos a ahorrar memoria.
-//         *
-//         * Implementa la clase ItemFactory siguiendo los casos test
-//         * que se proporcionan.
-//         *
-//         * ItemFactory crea el Item que le pides,
-//         * lo guarda en un diccionario y lo devuelve.
-//         * Cuando solicitas crear de nuevo ese Item
-//         * te devuelve la misma referencia al objeto que has creado antes,
-//         * ahorrando asi memoria.
-//         */
-//
-//        Comanda order = new Order();
-//
-//        order.addItem("Krabby Patty", 1.25);
-//        order.addItem("Coral Bits", 1.00);
-//        order.addItem("Kelp Rings", 1.50);
-//        order.addItem("Golden Loaf", 2.00);
-//        order.addItem("Seafoam Soda", 1.00);
-//
-//        order.display();
+        /**
+         * Bubble Bass llega al restaurante
+         * y hace una comanda muy simple.
+         * Quiere todo lo que hay en el menu
+         * en su tamaño estandar y sin
+         * condimentos extras.
+         *
+         * Squidward Tentacles crea la comanda
+         * y la muestra en la pantalla para que
+         * el cliente le de el visto bueno
+         * antes de generar el recibo con la factura.
+         *
+         *
+         * OPCIONAL:
+         * Puesto que a lo largo del dia van a generarse muchos objetos
+         * siempre del mismo tipo, vamos a ahorrar memoria.
+         *
+         * Implementa la clase ItemFactory siguiendo los casos test
+         * que se proporcionan.
+         *
+         * ItemFactory crea el Item que le pides,
+         * lo guarda en un diccionario y lo devuelve.
+         * Cuando solicitas crear de nuevo ese Item
+         * te devuelve la misma referencia al objeto que has creado antes,
+         * ahorrando asi memoria.
+         */
+
+        Comanda order = new Order();
+
+        order.addItem("Krabby Patty", 1.25);
+        order.addItem("Coral Bits", 1.00);
+        order.addItem("Kelp Rings", 1.50);
+        order.addItem("Golden Loaf", 2.00);
+        order.addItem("Seafoam Soda", 1.00);
+
+        order.display();
 
 //        /**
 //         * Squidward Tentacles genera el recibo,
