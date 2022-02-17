@@ -35,7 +35,7 @@ public class Receipt implements Ticket {
 
     @Override
     public void sumExtrasCharge() {
-
+        getChain().sumExtras(getOrder());
     }
 
     @Override
