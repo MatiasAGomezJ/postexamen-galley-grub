@@ -10,16 +10,26 @@ public class ItemTest {
     public Item item;
     public String nombre;
     public Double price;
+    public String extra;
 
-    @Before
-    public void iniialize(){
+    @Test
+    public void testToStringWithoutExtra() {
+        Prices.init_prices();
         nombre = "Hamborguesa";
         price = 50.00;
         item = new Item(nombre, price);
-    }
-    @Test
-    public void testToString() {
         String output = nombre + "...." + price + "$";
+        assertEquals(output, item.toString());
+    }
+
+    @Test
+    public void testToStringWithExtra() {
+        Prices.init_prices();
+        nombre = "Hamborguesa";
+        price = 50.00;
+        extra = "cheese"; // precio = 0.25
+        item = new Item(nombre, price, extra);
+        String output = nombre + "...." + price + "$ + 0.25$";
         assertEquals(output, item.toString());
     }
 }
