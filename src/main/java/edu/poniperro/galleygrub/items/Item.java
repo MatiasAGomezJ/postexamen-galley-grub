@@ -38,10 +38,17 @@ public class Item implements Product {
 
     @Override
     public String toString() {
-        String output = name() + "...." + price() + "$";
-        if (!isRegular()) {
-            output += " + " + Prices.getPriceof(extra) + "$";
-        }
+        String output= "";
+
+        // Añade el nombre y si tiene extra tambien
+        output += isRegular() ? name() : name() + " w/ " + extra();
+
+        // Separador
+        output += "....";
+
+        // Añade el precio y si tiene extra tambien
+        output += isRegular() ? price() + "$" : price() + Prices.getPriceof(extra) + "$";
+
         return output;
     }
 
