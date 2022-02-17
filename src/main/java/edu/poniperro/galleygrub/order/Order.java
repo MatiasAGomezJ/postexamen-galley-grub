@@ -37,8 +37,8 @@ public class Order implements Comanda {
     }
 
     @Override
-    public void updateTotal(Double d) {
-
+    public void updateTotal(Double price) {
+        total += price;
     }
 
     @Override
