@@ -2,6 +2,7 @@ package edu.poniperro.galleygrub.order;
 
 import edu.poniperro.galleygrub.items.Item;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,14 +43,13 @@ public class Order implements Comanda {
 
     @Override
     public void display() {
-        String output = "\n\t --- ORDER ---  \n";
+        System.out.println("\n\t --- ORDER ---  ");
         for (Item item : items) {
-            output += "\t" + item.name() + "...." + item.price() + "$\n";
+            itemDisplay(item);
         }
-        System.out.println(output);
     }
 
     private void itemDisplay(Item item) {
-        item.toString();
+        System.out.println("\t" + item.toString());
     }
 }
