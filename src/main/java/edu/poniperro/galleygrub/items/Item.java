@@ -3,7 +3,7 @@ package edu.poniperro.galleygrub.items;
 public class Item implements Product {
     String name;
     Double price;
-    String extra;
+    String extra = "";
 
     public Item(String name, double price) {
         this.name = name;
@@ -33,12 +33,12 @@ public class Item implements Product {
 
     @Override
     public Boolean isRegular() {
-        return null;
+        return extra.isEmpty() ? extra.isEmpty() : false;
     }
 
     @Override
     public String toString() {
-        return name() + ", " + price();
+        return name() + "...." + price() + "$";
     }
 
     @Override
