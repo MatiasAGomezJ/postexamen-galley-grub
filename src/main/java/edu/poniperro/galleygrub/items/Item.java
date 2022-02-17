@@ -47,7 +47,7 @@ public class Item implements Product {
         output += "....";
 
         // Añade el precio y si tiene extra tambien
-        output += isRegular() ? price() + "$" : price() + Prices.getPriceof(extra) + "$";
+        output += isRegular() ? price() + "$" : price() + "$" + " + " + Prices.getPriceof(extra) + "$";
 
         return output;
     }
