@@ -38,7 +38,6 @@ public class ReceiptTest {
     // integracion receipt con un Extra
     @Test
     public void sum_extra_cheese_test() {
-
         cheese = new CheeseExtra();
         receipt.setChain(cheese);
         assertNotNull(receipt.getChain());
