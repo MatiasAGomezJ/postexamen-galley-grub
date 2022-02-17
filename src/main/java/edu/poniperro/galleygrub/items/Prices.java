@@ -17,7 +17,7 @@ public class Prices {
     public static void display() {
         String output = "";
         for (Map.Entry<String, Double> pair : prices.entrySet()) {
-            output += "\t" + pair.getKey() + "...." + pair.getValue() + "\n";
+            output += "\t" + pair.getKey() + "...." + pair.getValue() + "$\n";
         }
         System.out.println(output);
     }
