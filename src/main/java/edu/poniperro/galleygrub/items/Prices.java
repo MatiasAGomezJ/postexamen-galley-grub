@@ -21,4 +21,8 @@ public class Prices {
         }
         System.out.println(output);
     }
+
+    public static Double getPriceof(String itemName) {
+        return prices.containsKey(itemName) ? prices.get(itemName) : 0.0;
+    }
 }
