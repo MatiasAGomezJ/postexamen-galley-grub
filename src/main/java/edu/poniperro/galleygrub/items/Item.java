@@ -1,6 +1,6 @@
 package edu.poniperro.galleygrub.items;
 
-public class Item implements Product{
+public class Item implements Product {
     String name;
     Double price;
     String extra;
@@ -15,6 +15,7 @@ public class Item implements Product{
         this.price = price;
         this.extra = extra;
     }
+
     @Override
     public String name() {
         return this.name;
@@ -38,5 +39,18 @@ public class Item implements Product{
     @Override
     public String toString() {
         return name() + ", " + price();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Item) {
+            return this.name.equals(((Item) obj).name);
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode();
     }
 }
