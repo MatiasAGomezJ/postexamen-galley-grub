@@ -17,7 +17,7 @@ public class Order implements Comanda {
 
     @Override
     public void addItem(String name, double price, String extra) {
-
+        items.add(new Item(name, price, extra));
     }
 
     @Override
@@ -47,5 +47,9 @@ public class Order implements Comanda {
             output += "\t" + item.name() + "...." + item.price() + "$\n";
         }
         System.out.println(output);
+    }
+
+    private void itemDisplay(Item item) {
+        item.toString();
     }
 }
