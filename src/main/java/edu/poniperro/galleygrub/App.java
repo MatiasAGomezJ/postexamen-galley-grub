@@ -5,6 +5,7 @@ package edu.poniperro.galleygrub;
 //import edu.poniperro.galleygrub.extras.Regular;
 //import edu.poniperro.galleygrub.extras.SauceExtra;
 //import edu.poniperro.galleygrub.extras.SizeLargeExtra;
+import edu.poniperro.galleygrub.extras.Prices;
 //import edu.poniperro.galleygrub.items.Item;
 //import edu.poniperro.galleygrub.items.Prices;
 //import edu.poniperro.galleygrub.items.Product;
@@ -49,7 +50,6 @@ public class App
          * Lee los precios de los items en la imagen
          * del menu proporcionada.
          */
-
         Prices.init_prices();
 
         // formatea la salida de cada entrada del diccionario como prefieras
