@@ -29,7 +29,7 @@ public class ItemTest {
         price = 50.00;
         extra = "cheese"; // precio = 0.25
         item = new Item(nombre, price, extra);
-        String output = nombre + "...." + price + "$ + 0.25$";
+        String output = nombre + " w/ cheese...." + price + "$ + 0.25$";
         assertEquals(output, item.toString());
     }
 }
