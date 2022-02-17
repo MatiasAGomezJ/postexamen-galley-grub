@@ -28,7 +28,7 @@ public class Order implements Comanda {
 
     @Override
     public List<Item> itemList() {
-        return null;
+        return items;
     }
 
     @Override
