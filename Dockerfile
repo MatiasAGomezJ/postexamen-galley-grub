@@ -11,5 +11,5 @@ FROM openjdk:11.0-jre-slim-buster
 LABEL "edu.poniperro.galleygrub"="galleygrub"
 LABEL version=1.0-SNAPSHOT
 
-COPY --from=build /home/app/target/galleygrub-1.0-SNAPSHOT.jar /usr/local/lib/galleygrub.jar
+COPY --from=build /home/app/target/GalleyGrub-1.0-SNAPSHOT.jar /usr/local/lib/galleygrub.jar
 CMD ["java","-jar","/usr/local/lib/galleygrub.jar"]
