@@ -11,6 +11,7 @@ public class Receipt implements Ticket {
 
     public Receipt(Comanda order) {
         this.order = order;
+        this.total = order.getTotal();
     }
 
     @Override
