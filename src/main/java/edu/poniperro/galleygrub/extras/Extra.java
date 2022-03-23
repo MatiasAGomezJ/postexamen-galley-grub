@@ -5,14 +5,11 @@ import edu.poniperro.galleygrub.order.Comanda;
 import java.util.Optional;
 
 public abstract class Extra {
-    static final String CHEESE = "";
-    static final String SAUCE = "";
-    static final String SIZE_LARGE = "";
-    String extraProduct;
-    Optional<Extra> nextExtra;
+
+    Optional<Extra> nextExtra = Optional.ofNullable(null);
 
     public void setNextExtra(Extra extra) {
-        nextExtra = Optional.ofNullable(extra);
+        this.nextExtra = Optional.of(extra);
     }
 
     public abstract void sumExtras(Comanda order);
