@@ -23,7 +23,7 @@ public class Order implements Comanda {
 
     @Override
     public int size() {
-        return 0;
+        return items.size();
     }
 
     @Override
