@@ -30,12 +30,18 @@ public class Receipt implements Ticket {
 
     @Override
     public Double total() {
-        return total;
+        if (this.total == 0d) {
+            this.sumExtrasCharge();
+            this.total = this.getOrder().getTotal();
+        }
+        return this.total;
     }
 
     @Override
     public void sumExtrasCharge() {
-        getChain().sumExtras(getOrder());
+        if (getChain() != null) {
+            getChain().sumExtras(getOrder());
+        }
     }
 
     @Override
