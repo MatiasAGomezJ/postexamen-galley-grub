@@ -3,26 +3,44 @@ package edu.poniperro.galleygrub.items;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Prices {
+public enum Prices {
+    CHEESE(0.25),
+    SAUCE(0.5),
+    MEDIUM(0.25),
+    LARGE(0.5);
 
-    private static final Map<String, Double> prices = new HashMap<>();
+    Double extra;
+
+    private Prices(Double extra) {
+        this.extra = extra;
+    }
 
     public static void init_prices() {
-        prices.put("cheese", 0.25);
-        prices.put("sauce", 0.5);
-        prices.put("medium", 0.25);
-        prices.put("large", 0.5);
     }
 
     public static void display() {
         String output = "";
-        for (Map.Entry<String, Double> pair : prices.entrySet()) {
-            output += "\t" + pair.getKey() + "...." + pair.getValue() + "$\n";
+        for (Prices price: Prices.values()) {
+            output += "\t" + price.name() + "...." + price.extra + "$\n";
         }
         System.out.println(output);
     }
 
     public static Double getPriceof(String itemName) {
-        return prices.containsKey(itemName) ? prices.get(itemName) : 0.0;
+        itemName = itemName.toUpperCase();
+        return containsName(itemName) ? Prices.valueOf(itemName).getExtra() : 0.0;
+    }
+
+    private static boolean containsName(String itemName) {
+        for (Prices price: Prices.values()) {
+            if (price.name().equals(itemName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Double getExtra() {
+        return extra;
     }
 }
