@@ -1,8 +1,8 @@
 package edu.poniperro.galleygrub.order;
 
 import edu.poniperro.galleygrub.items.Item;
+import edu.poniperro.galleygrub.items.ItemFactory;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,14 +11,19 @@ public class Order implements Comanda {
     private List<Item> items = new ArrayList<>();
     private double total;
 
+    public Order() {
+        ItemFactory.clear();
+    }
+
     @Override
     public void addItem(String name, double price) {
-        items.add(new Item(name, price));
+        items.add(ItemFactory.getItem(name, price));
     }
 
     @Override
     public void addItem(String name, double price, String extra) {
-        items.add(new Item(name, price, extra));
+        items.add(ItemFactory.getItem(name, price, extra));
+
     }
 
     @Override
